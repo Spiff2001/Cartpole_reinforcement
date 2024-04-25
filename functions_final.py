@@ -178,7 +178,7 @@ class DeepQLearning:
         model.add(Dense(56,activation='relu'))
         model.add(Dense(self.actionDimension,activation='linear'))
         # compile the network with the custom loss defined in my_loss_fn
-        model.compile(optimizer = (), loss = 'mse', metrics = ['accuracy'])
+        model.compile(optimizer = Adam(), loss = 'mse', metrics = ['accuracy'])
         return model
     ###########################################################################
     #   END - function createNetwork()

@@ -26,9 +26,6 @@ keras==2.11.0
 gym==0.26.2
 
 """
-# you will also need to install MoviePy, and you do not need to import it explicitly
-# pip install moviepy
-
 
 import keras
 from keras import ops
@@ -103,12 +100,14 @@ for i in range(450):
     if terminalState:
         print("Environment terminated: commencing reset")
         currentState, prob = env.reset()
-        # break  # Exit the loop when the episode ends
+        # Exit the loop when the episode ends
 print("random environmental testing complete---switching to trained model")
 
 env.reset()
 
 terminalState=False
+
+# trained model comparison:
 for i in range(450):
     # get the Q-value (1 by 2 vector)
     Qvalues=loaded_model.predict(currentState.reshape(1,4))
