@@ -1,4 +1,4 @@
-#**Reinforcement Learning in the OpenAI Gymnasium Cartpole Environment**
+**Reinforcement Learning in the OpenAI Gymnasium Cartpole Environment**
 
 Using tutorials from Aleksander Haber (listed in all of the project files) as well as various keras help sites and the OpenAI gym docs, I've made a basic reinforcement learning platform for the OpenAI gymnasium "cartpole" environment: a simple game scenario where a computer tries to balance a weighted pendulum by moving a cart back and forth. 
 
