@@ -1,35 +1,19 @@
-# Deep-Q-Learning-Network-from-Scratch-in-Python-TensorFlow-and-OpenAI-Gym
+#**Reinforcement Learning in the OpenAI Gymnasium Cartpole Environment**
 
-These code files implement the Deep Q-learning Network (DQN) algorithm from scratch by using Python, TensorFlow (Keras), and OpenAI Gym. The codes are tested in the OpenAI Gym Cart Pole (v1) environment. These code files are a part of the reinforcement learning tutorial I am developing. The tutorial webpage explaining the codes is given here: 
+Using tutorials from Aleksander Haber (listed in all of the project files) as well as various keras help sites and the OpenAI gym docs, I've made a basic reinforcement learning platform for the OpenAI gymnasium "cartpole" environment: a simple game scenario where a computer tries to balance a weighted pendulum by moving a cart back and forth. 
 
-https://aleksandarhaber.com/deep-q-networks-dqn-in-python-from-scratch-by-using-openai-gym-and-tensorflow-reinforcement-learning-tutorial/
+This project has two main exectuable files: driverCode_final.py and simulateTrainedModel.py. The former generates and trains neural network models using the **Adam optimizer**
+and the **Mean Squared Error loss function, ** before saving them as high-density files in the native .keras format. 
 
-Uploaded files:
+NOTE: although running the driverCode training file will create a new keras file if the file has not already been created, the function will otherwise **overwrite** any saved model data---please make sure you aren't accidentally destroying your trained networks!
 
-- "driverCode_final.py" - this is the driver code for training the model. This code import a class definition that implements the Deep Q Network from "functions_final.py". You should start from here.
+The second file, simulateTrainedModel.py, generates a render window so that you can see your trained neural network perform in real time and compare its behavior to a fully random set of actions: the random simulation will initialize first, followed by the saved model of your choice.  
 
-- "functions_final.py" - this is the file that implements the class called "DeepQLearning" that implements the Deep Q Network.
+The final submission form of this project will include a file called "trained_simulation.keras," which will be a neural net trained for roughly one day, queued up to run as the simulated model.
 
-- "simulateTrainedModel.py" - this file loads the trained TensorFlow model stored in the TensorFlow model file "trained_model.h5"  and creates a video that shows the control performance. Note that the video is saved in the folder "stored_video" (if such a folder does not exist it will be created)
+In working on this project, I've learned a lot about the nuts and bolts of generative AI work: features like the epsilon-greedy approach for exploratory learning and the concepts of action and observation spaces have been crucial. Additionally, I've gotten to get a closer look at the standard trials and tribulations of setting up a neural net from a pre-trained model, as I initialize new environments with existing data and implement Q value prediction functions. 
 
-- "trained_model.h5"  - this is the model I trained for one day on my computer - you can use this model to visualize the performance. You can also improve the model by loading its weights and resuming the training process. DO NOT OVERWRITE THIS MODEL. IF YOU DO SO, YOU WILL ERASE THE TRAINED MODEL.
-
-- "trained_model_temp.h5" - this is just a temporary model obtained after several training episodes to illustrate the performance of untrained model, and to use it as a baseline
-
-
-LICENSE: THIS CODE CAN BE USED FREE OF CHARGE ONLY FOR ACADEMIC AND EDUCATIONAL PURPOSES. THAT IS, IT CAN BE USED FREE OF CHARGE ONLY IF THE PURPOSE IS NON-COMMERCIAL AND IF THE PURPOSE IS NOT TO MAKE PROFIT OR EARN MONEY BY USING THIS CODE.
-
-IF YOU WANT TO USE THIS CODE IN THE COMMERCIAL SETTING, THAT IS, IF YOU WORK FOR A COMPANY OR IF YOU ARE AN INDEPENDENT
-CONSULTANT AND IF YOU WANT TO USE THIS CODE, THEN WITHOUT MY PERMISSION AND WITHOUT PAYING THE PROPER FEE, YOU ARE NOT ALLOWED TO USE THIS CODE. YOU CAN CONTACT ME AT
-
-aleksandar.haber@gmail.com
-
-TO INFORM YOURSELF ABOUT THE LICENSE OPTIONS AND FEES FOR USING THIS CODE.
-ALSO, IT IS NOT ALLOWED TO 
-(1) MODIFY THIS CODE IN ANY WAY WITHOUT MY PERMISSION.
-(2) INTEGRATE THIS CODE IN OTHER PROJECTS WITHOUT MY PERMISSION.
-
- DELIBERATE OR INDELIBERATE VIOLATIONS OF THIS LICENSE WILL INDUCE LEGAL ACTIONS AND LAWSUITS. 
+If I were to do some further work and research with this model, I would take another crack at implementing reinforcement learning with classic Atari games like Breakout: the observation and action spaces shouldn't be too alien, and although I've had issues with them in the past, I think it would be an exciting challenge!
 
 
 
