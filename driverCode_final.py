@@ -65,6 +65,5 @@ LearningQDeep.sumRewardsEpisode
 LearningQDeep.mainNetwork.summary()
 # save the model, this is important, since it takes long time to train the model 
 # and we will need model in another file to visualize the trained model performance
-LearningQDeep.mainNetwork.save('trained_simulation.keras')
 LearningQDeep.mainNetwork.save('model_simulation.keras')
 
