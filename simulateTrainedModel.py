@@ -47,7 +47,7 @@ import numpy as np
 #     custom_objects={"my_loss_fn": DeepQLearning.my_loss_fn},
 # )
 
-loaded_model = keras.models.load_model('model_simulation.keras')
+loaded_model = keras.models.load_model('trained_simulation.keras')
 
 
 
